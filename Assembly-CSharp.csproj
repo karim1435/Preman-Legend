@@ -60,8 +60,10 @@
      <Compile Include="Assets\Scripts\Player\Direction.cs" />
      <Compile Include="Assets\Scripts\Player\Enemy.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Player\EnemyStates\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyStates\EnemyBehavior.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyStates\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\EnemyStates\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyStates\IEnemyState.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyStates\IdleState.cs" />
      <Compile Include="Assets\Scripts\Player\EnemyStates\MeleeState.cs" />

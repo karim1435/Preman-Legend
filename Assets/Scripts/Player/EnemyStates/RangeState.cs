@@ -19,7 +19,7 @@ namespace Assets.Scripts.Player.EnemyStates
         {
             ThrowKnife();
 
-            if (enemy.InMeeleRange)
+            if (enemy.RangeInMeele)
                 enemy.ChangeState(new MeleeState());
 
             else if (enemy.Target != null)

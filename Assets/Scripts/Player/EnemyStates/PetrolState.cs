@@ -21,7 +21,7 @@ namespace Assets.Scripts.Player.EnemyStates
         {
             Petrol();
             enemy.Petrol();
-            if (enemy.Target != null && enemy.InThrowRange)
+            if (enemy.Target != null && enemy.RangeInThrow)
                 enemy.ChangeState(new RangeState());
         }
         private void Petrol()

@@ -33,7 +33,6 @@ namespace Assets.Scripts.Player.EnemyStates
                 DamageHp();
             }
         }
-
         private void DamageHp()
         {
             attacked = true;

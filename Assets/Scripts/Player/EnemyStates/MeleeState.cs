@@ -17,7 +17,7 @@ namespace Assets.Scripts.Player.EnemyStates
 
         public void Execute()
         {
-            if (enemy.InThrowRange && !enemy.InMeeleRange)
+            if (enemy.RangeInThrow && !enemy.RangeInMeele)
                 enemy.ChangeState(new RangeState());
 
             else if (enemy.Target == null)
