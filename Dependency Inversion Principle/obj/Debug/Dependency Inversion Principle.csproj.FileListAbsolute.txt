@@ -1,0 +1,6 @@
+E:\Projects\PreMan\Dependency Inversion Principle\bin\Debug\Dependency Inversion Principle.exe.config
+E:\Projects\PreMan\Dependency Inversion Principle\bin\Debug\Dependency Inversion Principle.exe
+E:\Projects\PreMan\Dependency Inversion Principle\bin\Debug\Dependency Inversion Principle.pdb
+E:\Projects\PreMan\Dependency Inversion Principle\obj\Debug\Dependency Inversion Principle.csprojResolveAssemblyReference.cache
+E:\Projects\PreMan\Dependency Inversion Principle\obj\Debug\Dependency Inversion Principle.exe
+E:\Projects\PreMan\Dependency Inversion Principle\obj\Debug\Dependency Inversion Principle.pdb
