@@ -1,6 +1,0 @@
-E:\Projects\PreMan\Open Closed Principle\bin\Debug\Open Closed Principle.exe.config
-E:\Projects\PreMan\Open Closed Principle\bin\Debug\Open Closed Principle.exe
-E:\Projects\PreMan\Open Closed Principle\bin\Debug\Open Closed Principle.pdb
-E:\Projects\PreMan\Open Closed Principle\obj\Debug\Open Closed Principle.exe
-E:\Projects\PreMan\Open Closed Principle\obj\Debug\Open Closed Principle.pdb
-E:\Projects\PreMan\Open Closed Principle\obj\Debug\Open Closed Principle.csprojResolveAssemblyReference.cache

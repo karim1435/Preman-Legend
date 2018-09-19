@@ -1,6 +1,0 @@
-E:\Projects\PreMan\Liskov Subtitution Principle\bin\Debug\Liskov Subtitution Principle.exe.config
-E:\Projects\PreMan\Liskov Subtitution Principle\bin\Debug\Liskov Subtitution Principle.exe
-E:\Projects\PreMan\Liskov Subtitution Principle\bin\Debug\Liskov Subtitution Principle.pdb
-E:\Projects\PreMan\Liskov Subtitution Principle\obj\Debug\Liskov Subtitution Principle.exe
-E:\Projects\PreMan\Liskov Subtitution Principle\obj\Debug\Liskov Subtitution Principle.pdb
-E:\Projects\PreMan\Liskov Subtitution Principle\obj\Debug\Liskov Subtitution Principle.csprojResolveAssemblyReference.cache

@@ -1,6 +1,0 @@
-E:\Projects\PreMan\Interface Segragation\bin\Debug\Interface Segragation.exe.config
-E:\Projects\PreMan\Interface Segragation\bin\Debug\Interface Segragation.exe
-E:\Projects\PreMan\Interface Segragation\bin\Debug\Interface Segragation.pdb
-E:\Projects\PreMan\Interface Segragation\obj\Debug\Interface Segragation.exe
-E:\Projects\PreMan\Interface Segragation\obj\Debug\Interface Segragation.pdb
-E:\Projects\PreMan\Interface Segragation\obj\Debug\Interface Segragation.csprojResolveAssemblyReference.cache
