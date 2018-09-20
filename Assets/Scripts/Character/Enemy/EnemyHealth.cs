@@ -13,9 +13,5 @@ namespace Assets.Scripts.Character.EnemyStates
         {
             OnTriggerEnter2D(other);
         }
-        protected override void Death()
-        {
-            //Destroy(gameObject);
-        }
     }
 }

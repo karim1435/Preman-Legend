@@ -3,15 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using UnityEngine;
-namespace Assets.Scripts.Character.Playerss
+
+namespace Assets.Scripts.Character.Playersd
 {
-    public class PlayerHealth : Health
+    public class PlayerDeath : Death
     {
-        public void Damage(Collider2D other)
+        protected override void Dead()
         {
-            OnTriggerEnter2D(other);
+            ToogleScript(false);
         }
     }
 }

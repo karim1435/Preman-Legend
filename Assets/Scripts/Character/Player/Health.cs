@@ -8,8 +8,11 @@ using UnityEngine;
 
 namespace Assets.Scripts.Character.Helths
 {
-    public abstract class Health:MonoBehaviour
+    public abstract class Health : MonoBehaviour
     {
+        public delegate void Death();
+        public event Death OnDeath;
+
         private Character character;
         protected float initialHealth;
         [SerializeField]
@@ -32,13 +35,18 @@ namespace Assets.Scripts.Character.Helths
         {
             attacked = false;
         }
-        protected abstract void Death();
+        protected  void OnCharacterDeath()
+        {
+            if (OnDeath != null)
+                OnDeath();
+        }
         protected virtual void OnTriggerEnter2D(Collider2D other)
         {
             if (damageSources.Contains(other.tag))
             {
                 float attackPower=other.GetComponent<IWeapon>().AttackPower;
                 TakeDamage(attackPower);
+                Destroy(other.gameObject);
             }
         }
         protected virtual void TakeDamage(float attackPower)
@@ -50,7 +58,11 @@ namespace Assets.Scripts.Character.Helths
         protected void CheckIfZero()
         {
             if (currentHealth <= 0)
+            {
                 die = true;
+                OnCharacterDeath();
+            }
+            
         }
     }
 }

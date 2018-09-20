@@ -39,10 +39,13 @@ namespace Assets.Scripts.Character.Attack
 
         public void Shoot()
         {
-            if (character.Dir == Direction.Right)
-                InstantiateFire(Quaternion.Euler(0, 0, -90), Vector2.right);
-            else
-                InstantiateFire(Quaternion.Euler(0, 0, 90), Vector2.left);
+            if (isAttack)
+            {
+                if (character.Dir == Direction.Right)
+                    InstantiateFire(Quaternion.Euler(0, 0, -90), Vector2.right);
+                else
+                    InstantiateFire(Quaternion.Euler(0, 0, 90), Vector2.left);
+            }
         }
         private void InstantiateFire(Quaternion rotation, Vector2 dir)
         {

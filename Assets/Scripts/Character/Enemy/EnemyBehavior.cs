@@ -41,9 +41,6 @@ namespace Assets.Scripts.Character.EnemyStates
         }
         void Update()
         {
-            if (enemyStatusHealth.Die)
-                return;
-
             currentState.Execute();
 
             if (Idle || Fighting || enemyStatusHealth.Die)
@@ -61,11 +58,11 @@ namespace Assets.Scripts.Character.EnemyStates
             currentState = newState;
             currentState.Enter(this);
         }
-        //void OnTriggerEnter2D(Collider2D other)
-        //{
-        //    currentState.OnTrigger(other);
-        //    //enemyStatusHealth.Damage(other);
-        //}
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            currentState.OnTrigger(other);
+            //enemyStatusHealth.Damage(other);
+        }
         public void Petrol()
         {
             if (enemyMovement.onTheEdge)
