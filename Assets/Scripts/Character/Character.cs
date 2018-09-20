@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Character
 {
-    public class Character:MonoBehaviour
+    public abstract class Character:MonoBehaviour
     {
         #region SerializeField
         [SerializeField]
@@ -14,11 +14,22 @@ namespace Assets.Scripts.Character
         [SerializeField]
         private float attackPower;
         [SerializeField]
+        private float shootDamage;
+        [SerializeField]
         private float health;
         #endregion
+        #region SerializeField
+        [SerializeField]
+        private float throwRange;
+        [SerializeField]
+        private float meeleRange;
+        #endregion 
 
+        public float MeeleRange { get { return meeleRange; } }
+        public float ThrowRange { get { return throwRange; } }
         private Direction direction = Direction.Right;
         public float AttackPower { get { return attackPower; } }
+        public float ShootDamage { get { return shootDamage; } }
         public float MoveSpeed { get { return moveSpeed; } }
         public Direction Dir { get { return direction; } set { direction = value; } }
         public float Health { get { return health; }  }

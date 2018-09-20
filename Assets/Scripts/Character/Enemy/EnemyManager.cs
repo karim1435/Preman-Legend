@@ -28,9 +28,9 @@ namespace Assets.Scripts.Character
                 ChangeAnimation(2);
             if (enemyBehavior.Shoot)
                 ChangeAnimation(3);
-            if (enemyHealth.attacked)
+            if (enemyHealth.Attacked)
                 ChangeAnimation(4);
-            if (enemyHealth.die)
+            if (enemyHealth.Die)
                 ChangeAnimation(5);
         }
         void ChangeAnimation(int value)

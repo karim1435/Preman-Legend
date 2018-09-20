@@ -10,6 +10,11 @@ namespace Assets.Scripts.Character.EnemyStates
     public class MeleeState : IEnemyState
     {
         private EnemyBehavior enemy;
+
+        [SerializeField]
+        private float attacktTimer;
+        [SerializeField]
+        private float attackCollDown = 3f;
         public void Enter(EnemyBehavior enemy)
         {
             enemy.Fighting = true;
@@ -18,11 +23,13 @@ namespace Assets.Scripts.Character.EnemyStates
 
         public void Execute()
         {
+            AttackSword();
+
             if (enemy.RangeInThrow && !enemy.RangeInMeele)
             {
                 if (enemy is EnemyFighter)
                 {
-                    enemy.ChangeState(new PetrolState());
+                    enemy.Petrol();
                 }
                 else if(enemy is EnemyShooter)
                 {
@@ -44,7 +51,7 @@ namespace Assets.Scripts.Character.EnemyStates
             
         }
         public void AttackSword()
-        {
+        {            
 
         }
     }

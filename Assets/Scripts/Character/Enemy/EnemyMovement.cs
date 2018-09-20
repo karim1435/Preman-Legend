@@ -40,6 +40,7 @@ namespace Assets.Scripts.Character.EnemyStates
             enemyBehavior.OnEnemyMove -= Move;
             enemyBehavior.OnChangeDirection -= ToogleDirection;
         }
+     
         private void Move()
         {
             var tempSpeed = moveSpeed;

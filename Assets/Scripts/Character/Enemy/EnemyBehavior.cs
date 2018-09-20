@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace Assets.Scripts.Character.EnemyStates
         public Rigidbody2D Body2D { get; set; }
         public bool RangeInThrow { get { return enemyAttack.InThrowRange; } }
         public bool RangeInMeele { get { return enemyAttack.InMeeleRange; } }
-
+        public bool IsMeleeAttack { get { return enemyAttack.attacking; } set { enemyAttack.attacking = value; } }
         protected void Start()
         {
             enemyMovement = GetComponent<EnemyMovement>();
@@ -38,14 +39,14 @@ namespace Assets.Scripts.Character.EnemyStates
             Body2D = GetComponent<Rigidbody2D>();
             ChangeState(new IdleState());
         }
-        protected void FixedUpdate()
+        void Update()
         {
-            if (enemyStatusHealth.die)
+            if (enemyStatusHealth.Die)
                 return;
 
             currentState.Execute();
 
-            if (Idle || Fighting || enemyStatusHealth.die)
+            if (Idle || Fighting || enemyStatusHealth.Die)
                 Body2D.velocity = Vector2.zero;
 
             if (OnLookTarget != null)
@@ -60,10 +61,11 @@ namespace Assets.Scripts.Character.EnemyStates
             currentState = newState;
             currentState.Enter(this);
         }
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            currentState.OnTrigger(other);
-        }
+        //void OnTriggerEnter2D(Collider2D other)
+        //{
+        //    currentState.OnTrigger(other);
+        //    //enemyStatusHealth.Damage(other);
+        //}
         public void Petrol()
         {
             if (enemyMovement.onTheEdge)
@@ -89,7 +91,7 @@ namespace Assets.Scripts.Character.EnemyStates
                     OnEnemyMove();
             }
         }
-        public abstract void Attack();
+       
     }
 
 }

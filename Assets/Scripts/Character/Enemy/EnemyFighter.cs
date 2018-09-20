@@ -9,9 +9,6 @@ namespace Assets.Scripts.Player.EnemyStates
 {
     public class EnemyFighter : EnemyBehavior
     {
-        public override void Attack()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

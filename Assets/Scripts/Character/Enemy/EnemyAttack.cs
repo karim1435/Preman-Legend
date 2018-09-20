@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Character.Attack;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,24 +7,20 @@ using UnityEngine;
 
 namespace Assets.Scripts.Character.EnemyStates
 {
-    public class EnemyAttack:MonoBehaviour
+    public class EnemyAttack:AttackBehavior
     {
         private Enemy enemy;
-        private float meleeRange;
-        private float throwRange;
         private GameObject target;
         private EnemyRange enemyRange;
         public GameObject Target { get { return target; }set { target = value; } }
-        
-        void Start()
+        public bool attacking { get { return IsAttack; } set { IsAttack = value; } }
+        protected override void Start()
         {
-            enemy = GetComponent<Enemy>();
-            meleeRange = enemy.MeeleRange;
-            throwRange = enemy.ThrowRange;
-
+            base.Start();
             enemyRange = GetComponent<EnemyRange>();
             enemyRange.InRange += TargetAttack;
         }
+
         void OnDisable()
         {
             enemyRange.InRange -= TargetAttack;
@@ -33,7 +30,7 @@ namespace Assets.Scripts.Character.EnemyStates
             get
             {
                 if (target != null)
-                    return GetDistance(gameObject, target) <= throwRange;
+                    return GetDistance(gameObject, target) <= throwAttack;
 
                 return false;
             }
@@ -43,7 +40,7 @@ namespace Assets.Scripts.Character.EnemyStates
             get
             {
                 if (target != null)
-                    return GetDistance(gameObject, target) <= meleeRange;
+                    return GetDistance(gameObject, target) <= meleeAttack;
 
                 return false;
             }
@@ -52,9 +49,17 @@ namespace Assets.Scripts.Character.EnemyStates
         {
             return Vector2.Distance(from.transform.position, to.transform.position);
         }
+        void Update()
+        {
+            AttackEnemy();
+        }
         private void TargetAttack(GameObject other)
         {
             target = other;
+        }
+        public void Attacking(int value)
+        {
+            IsAttack=value==1?true:false;           
         }
     }
 }

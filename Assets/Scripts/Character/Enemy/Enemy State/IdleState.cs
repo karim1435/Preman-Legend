@@ -20,8 +20,6 @@ namespace Assets.Scripts.Character.EnemyStates
         {
             Idle();
 
-            if()
-
             if(enemy.Target!=null)
                 enemy.ChangeState(new PetrolState());
         }

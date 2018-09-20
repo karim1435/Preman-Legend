@@ -1,18 +1,17 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 namespace Assets.Scripts.Character
 {
-    class PlayerMelee : PlayerAttack
+    public class PlayerMelee : PlayerAttack
     {
-        [SerializeField]
-        private Collider2D swordCollider;
-        protected override void AttackEnemy()
+       
+        protected override void ReadyToAttack()
         {
-            swordCollider.enabled = IsAttack ? true : false;
+            AttackEnemy();
         }
-
     }
 }

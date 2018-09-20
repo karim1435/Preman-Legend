@@ -10,9 +10,6 @@ namespace Assets.Scripts.Character.EnemyStates
     class RangeState : IEnemyState
     {
         private EnemyBehavior enemy;
-
-        private float throwTimer;
-        private float throwCoolDown = 3;
         public void Enter(EnemyBehavior enemy)
         {
             this.enemy = enemy;
@@ -25,16 +22,14 @@ namespace Assets.Scripts.Character.EnemyStates
             else if (enemy.Target != null)
             {
                 if(enemy is EnemyFighter)
-                {
                     enemy.Petrol();
-                }
+
                 else if (enemy is EnemyShooter)
                 {
                     enemy.Shoot = true;
                     ThrowKnife();      
                 }
             }
-
             else
                 enemy.ChangeState(new IdleState());
         }
@@ -49,9 +44,7 @@ namespace Assets.Scripts.Character.EnemyStates
         }
         public void ThrowKnife()
         {
-
             enemy.Body2D.velocity = Vector2.zero;
-
         }
     }
 }

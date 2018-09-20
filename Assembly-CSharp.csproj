@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\IgnoreColiision.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Character\Character.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\IEnemyState.cs" />
@@ -62,14 +63,16 @@
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyRange.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyShooter.cs" />
      <Compile Include="Assets\Scripts\Character\Player\AbstractBehavior.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\ChangeDirection.cs" />
+     <Compile Include="Assets\Scripts\Character\Player\AttackBehavior.cs" />
      <Compile Include="Assets\Scripts\Character\Player\CollisionDetection.cs" />
      <Compile Include="Assets\Scripts\Character\Player\CollisionState.cs" />
      <Compile Include="Assets\Scripts\Character\Player\CollisionTrigger.cs" />
      <Compile Include="Assets\Scripts\Character\Player\Direction.cs" />
      <Compile Include="Assets\Scripts\Character\Player\FaceDirection.cs" />
+     <Compile Include="Assets\Scripts\Character\Player\Health.cs" />
      <Compile Include="Assets\Scripts\Character\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Character\Player\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\Character\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Character\Player\PlayerJump.cs" />
      <Compile Include="Assets\Scripts\Character\Player\PlayerLongJump.cs" />
      <Compile Include="Assets\Scripts\Character\Player\PlayerManager.cs" />
@@ -83,7 +86,10 @@
      <Compile Include="Assets\Scripts\Input Game\InputManager.cs" />
      <Compile Include="Assets\Scripts\Input Game\InputState.cs" />
      <Compile Include="Assets\Scripts\Weapon\IShoot.cs" />
+     <Compile Include="Assets\Scripts\Weapon\IWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapon\Knife.cs" />
+     <Compile Include="Assets\Scripts\Weapon\Sword.cs" />
+     <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

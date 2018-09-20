@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Player;
+﻿using Assets.Scripts.Character.Playerss;
+using Assets.Scripts.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace Assets.Scripts.Character
         private PlayerMelee playerMeele;
         private Animator animator;
         private PlayerJump playerJump;
+        private PlayerHealth playerHelth;
         void Awake()
         {
             playerJump = GetComponent<PlayerJump>();
@@ -22,6 +24,7 @@ namespace Assets.Scripts.Character
             playerShoot = GetComponent<PlayerShoot>();
             playerMeele = GetComponent<PlayerMelee>();
             collisionState = GetComponent<CollisionState>();
+            playerHelth = GetComponent<PlayerHealth>();
         }
         void Update()
         {
@@ -33,6 +36,10 @@ namespace Assets.Scripts.Character
                 ChangeAnimation(2);
             if (playerShoot.IsAttack)
                 ChangeAnimation(3);
+            if (playerHelth.Attacked)
+                ChangeAnimation(4);
+            if (playerHelth.Die)
+                ChangeAnimation(5);
             if (playerMovement.absVelY > 0)
                 ChangeAnimation(6);
         }
