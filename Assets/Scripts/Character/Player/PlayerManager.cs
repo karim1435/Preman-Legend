@@ -1,11 +1,11 @@
-﻿using Assets.Scripts.Character.Playerss;
+﻿using Assets.Scripts.Characterrr.Playerss;
 using Assets.Scripts.Player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-namespace Assets.Scripts.Character
+namespace Assets.Scripts.Characterrr
 {
     public class PlayerManager:MonoBehaviour
     {

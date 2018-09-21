@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-namespace Assets.Scripts.Character.EnemyStates
+namespace Assets.Scripts.Characterrr.EnemyStates
 {
     public class EnemyMovement:MonoBehaviour
     {

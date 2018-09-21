@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Assets.Scripts.Characterrr
+namespace Assets.Scripts.Weapon
 {
-    public enum Direction
+    public class KnifeWeapon:WeaponManager
     {
-        Right=1,
-        Left=-1
+
     }
 }

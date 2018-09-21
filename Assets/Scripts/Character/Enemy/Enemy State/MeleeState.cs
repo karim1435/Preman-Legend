@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.Character.EnemyStates
+namespace Assets.Scripts.Characterrr.EnemyStates
 {
     public class MeleeState : IEnemyState
     {
@@ -36,7 +36,6 @@ namespace Assets.Scripts.Character.EnemyStates
                     enemy.ChangeState(new RangeState());
                 }
             }
-
             else if (enemy.Target == null)
                 enemy.ChangeState(new IdleState());
         }

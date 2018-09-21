@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Characterrr;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Assets.Scripts.Weapon
 {
     public interface IShoot
     {
-        void InitializeDirection(Vector2 dir);
+        void InitializeDirection(Direction dir);
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.Character.EnemyStates
+namespace Assets.Scripts.Characterrr.EnemyStates
 {
     public abstract class EnemyBehavior : MonoBehaviour
     {
@@ -29,7 +29,6 @@ namespace Assets.Scripts.Character.EnemyStates
         public Rigidbody2D Body2D { get; set; }
         public bool RangeInThrow { get { return enemyAttack.InThrowRange; } }
         public bool RangeInMeele { get { return enemyAttack.InMeeleRange; } }
-        public bool IsMeleeAttack { get { return enemyAttack.attacking; } set { enemyAttack.attacking = value; } }
         protected void Start()
         {
             enemyMovement = GetComponent<EnemyMovement>();
@@ -61,7 +60,6 @@ namespace Assets.Scripts.Character.EnemyStates
         void OnTriggerEnter2D(Collider2D other)
         {
             currentState.OnTrigger(other);
-            //enemyStatusHealth.Damage(other);
         }
         public void Petrol()
         {

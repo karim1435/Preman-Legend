@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using Assets.Scripts.Character;
+using Assets.Scripts.Characterrr;
 namespace Assets.Scripts.Camera
 {
     public class CameraFollow:MonoBehaviour

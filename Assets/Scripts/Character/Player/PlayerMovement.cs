@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-namespace Assets.Scripts.Character{
+namespace Assets.Scripts.Characterrr{
     public class PlayerMovement : AbstractBehavior{
 
         private float moveSpeed;
@@ -14,10 +14,18 @@ namespace Assets.Scripts.Character{
         public float AbsvelX { get { return absVelX; } }
         public float AbsVely { get { return absVelY; } }
 
+        [SerializeField]
+        protected float knockBack;
+        [SerializeField]
+        protected float knockBackLength;
+        [SerializeField]
+        protected float knockBackCount;
+
+        public bool knockFromRight;
         void Start()
         {
             facingDir = GetComponent<FaceDirection>();
-                player = GetComponent<Player>();
+            player = GetComponent<Player>();
             moveSpeed = player.MoveSpeed;
         }
         protected void FixedUpdate()
@@ -39,6 +47,10 @@ namespace Assets.Scripts.Character{
             var tempSpeed = moveSpeed;
             var velX = tempSpeed * (float)player.Dir;
             body2D.velocity = new Vector2(velX, body2D.velocity.y);
+        }
+        private void KnockBack()
+        {
+
         }
     }
 }

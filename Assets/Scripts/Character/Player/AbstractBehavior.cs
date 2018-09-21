@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.Character
+namespace Assets.Scripts.Characterrr
 {
     public class AbstractBehavior:MonoBehaviour
     {

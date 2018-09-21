@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.Character.EnemyStates
+namespace Assets.Scripts.Characterrr.EnemyStates
 {
     class RangeState : IEnemyState
     {
@@ -13,7 +13,6 @@ namespace Assets.Scripts.Character.EnemyStates
         public void Enter(EnemyBehavior enemy)
         {
             this.enemy = enemy;
-            enemy.IsMeleeAttack = true;
         }
         public void Execute()
         {
@@ -38,7 +37,6 @@ namespace Assets.Scripts.Character.EnemyStates
         public void Exit()
         {
             enemy.Shoot = false;
-            enemy.IsMeleeAttack = false;
         }
         public void OnTrigger(Collider2D other)
         {

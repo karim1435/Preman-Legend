@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-namespace Assets.Scripts.Character
+namespace Assets.Scripts.Characterrr
 {
     public class Player : Character
     {

@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using Assets.Scripts.Weapon;
+using Assets.Scripts.Characterrr;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Knife : MonoBehaviour,IShoot, IWeapon
@@ -13,9 +14,7 @@ public class Knife : MonoBehaviour,IShoot, IWeapon
     private float attackPower;
     private Rigidbody2D body2d;
 
-    private Vector2 direction;
-
-    
+    private Direction direction;
     public float AttackPower
     {
         get { return attackPower; }
@@ -26,13 +25,13 @@ public class Knife : MonoBehaviour,IShoot, IWeapon
     }
     void FixedUpdate()
     {
-        body2d.velocity = direction * speed;
+        body2d.velocity = new Vector2((float)direction * speed,0);
     }
     void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
-    public void InitializeDirection(Vector2 direction)
+    public void InitializeDirection(Direction direction)
     {
         this.direction = direction;
     }

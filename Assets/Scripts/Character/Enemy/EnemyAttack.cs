@@ -1,11 +1,11 @@
-﻿using Assets.Scripts.Character.Attack;
+﻿using Assets.Scripts.Characterrr.Attack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.Character.EnemyStates
+namespace Assets.Scripts.Characterrr.EnemyStates
 {
     public class EnemyAttack:AttackBehavior
     {
@@ -13,7 +13,6 @@ namespace Assets.Scripts.Character.EnemyStates
         private GameObject target;
         private EnemyRange enemyRange;
         public GameObject Target { get { return target; }set { target = value; } }
-        public bool attacking { get { return IsAttack; } set { IsAttack = value; } }
         protected override void Start()
         {
             base.Start();
@@ -53,6 +52,7 @@ namespace Assets.Scripts.Character.EnemyStates
         {
             AttackEnemy();
         }
+        
         private void TargetAttack(GameObject other)
         {
             target = other;
@@ -60,6 +60,11 @@ namespace Assets.Scripts.Character.EnemyStates
         public void Attacking(int value)
         {
             IsAttack=value==1?true:false;           
+        }
+        public override void Shoot()
+        {
+            IsAttack = true;
+            base.Shoot();
         }
     }
 }

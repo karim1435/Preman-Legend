@@ -1,5 +1,5 @@
-﻿using Assets.Scripts.Character;
-using Assets.Scripts.Character.EnemyStates;
+﻿using Assets.Scripts.Characterrr;
+using Assets.Scripts.Characterrr.EnemyStates;
 using System;
 using System.Collections.Generic;
 using System.Linq;

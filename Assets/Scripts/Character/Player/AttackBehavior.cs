@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace Assets.Scripts.Character.Attack
+namespace Assets.Scripts.Characterrr.Attack
 {
     public abstract class AttackBehavior:AbstractBehavior
     {
@@ -20,6 +20,7 @@ namespace Assets.Scripts.Character.Attack
         [SerializeField]
         protected Collider2D swordCollider;
 
+        protected WeaponManager weaponManager;
         protected float attackPower;
         protected float shootDamage;
         protected float meleeAttack;
@@ -31,23 +32,24 @@ namespace Assets.Scripts.Character.Attack
         protected virtual void Start()
         {
             character = GetComponent<Character>();
+            weaponManager = GetComponent<WeaponManager>();
+
             attackPower = character.AttackPower;
             shootDamage = character.ShootDamage;
             throwAttack = character.ThrowRange;
             meleeAttack = character.MeeleRange;
-        }
 
-        public void Shoot()
+        }
+        public virtual void Shoot()
         {
             if (isAttack)
             {
-                if (character.Dir == Direction.Right)
-                    InstantiateFire(Quaternion.Euler(0, 0, -90), Vector2.right);
-                else
-                    InstantiateFire(Quaternion.Euler(0, 0, 90), Vector2.left);
+                weaponManager.UseWeapon();
+                var tempRotation = (float)character.Dir * 90;
+                InstantiateFire(Quaternion.Euler(0, 0, tempRotation), character.Dir);
             }
         }
-        private void InstantiateFire(Quaternion rotation, Vector2 dir)
+        private void InstantiateFire(Quaternion rotation, Direction dir)
         {
             GameObject gun = Instantiate(knifePrefarb, knifePositon.position, rotation) as GameObject;
             gun.GetComponent<IShoot>().InitializeDirection(dir);

@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\Weapon\IShoot.cs" />
      <Compile Include="Assets\Scripts\Weapon\IWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapon\Knife.cs" />
+     <Compile Include="Assets\Scripts\Weapon\KnifeWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapon\Sword.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
  <Reference Include="UnityEngine.UI">
