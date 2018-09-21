@@ -3,12 +3,13 @@ using System.Collections;
 
 public class CollisionTrigger : MonoBehaviour {
 
-    private BoxCollider2D playerCollider;
     [SerializeField]
     private BoxCollider2D platformCollider;
     [SerializeField]
     private BoxCollider2D platformTigger;
-	void Start () {
+
+    private BoxCollider2D playerCollider;
+    void Start () {
 
         playerCollider = GameObject.Find("Player").GetComponent<BoxCollider2D>();
 

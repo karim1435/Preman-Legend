@@ -5,7 +5,6 @@ namespace Assets.Scripts.Characterrr
     public class Player : Character
     {
         private static Player _instance;
-
         public static Player Instance
         {
             get

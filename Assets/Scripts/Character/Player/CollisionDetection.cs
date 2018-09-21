@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class CollisionDetection : MonoBehaviour {
-    private Collider2D gameObj;
-
+    
     [SerializeField]
     private Collider2D other;
+
+    private Collider2D gameObj;
     void Awake()
     {
         gameObj = GetComponent<Collider2D>();

@@ -15,16 +15,16 @@ namespace Assets.Scripts.Characterrr
         private PlayerMelee playerMeele;
         private Animator animator;
         private PlayerJump playerJump;
-        private PlayerHealth playerHelth;
+        private PlayerHealth playerHealth;
         void Awake()
         {
-            playerJump = GetComponent<PlayerJump>();
             animator = GetComponent<Animator>();
+            playerJump = GetComponent<PlayerJump>();          
             playerMovement = GetComponent<PlayerMovement>();
             playerShoot = GetComponent<PlayerShoot>();
             playerMeele = GetComponent<PlayerMelee>();
             collisionState = GetComponent<CollisionState>();
-            playerHelth = GetComponent<PlayerHealth>();
+            playerHealth = GetComponent<PlayerHealth>();
         }
         void Update()
         {
@@ -36,11 +36,11 @@ namespace Assets.Scripts.Characterrr
                 ChangeAnimation(2);
             if (playerShoot.IsAttack)
                 ChangeAnimation(3);
-            if (playerHelth.Attacked)
+            if (playerHealth.Attacked)
                 ChangeAnimation(4);
-            if (playerHelth.Die)
+            if (playerHealth.Die)
                 ChangeAnimation(5);
-            if (playerMovement.absVelY > 0)
+            if (playerMovement.AbsVely > 0)
                 ChangeAnimation(6);
         }
         void ChangeAnimation(int value)

@@ -9,9 +9,5 @@ namespace Assets.Scripts.Characterrr.Playerss
 {
     public class PlayerHealth : Health
     {
-        public void Damage(Collider2D other)
-        {
-            OnTriggerEnter2D(other);
-        }
     }
 }

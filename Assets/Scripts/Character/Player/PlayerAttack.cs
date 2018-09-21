@@ -29,7 +29,6 @@ namespace Assets.Scripts.Characterrr
         }
         public override void Shoot()
         {
-            
             if (weaponManager.IsWeaponAvailable)
             {
                 base.Shoot();           

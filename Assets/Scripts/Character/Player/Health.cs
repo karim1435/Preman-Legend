@@ -14,30 +14,28 @@ namespace Assets.Scripts.Characterrr.Helths
         public delegate void Death();
         public event Death OnDeath;
 
-        private Character character;
-        protected float initialHealth;
         [SerializeField]
-        protected float currentHealth;
+        private float initialHealth;
         [SerializeField]
         private List<string> damageSources;
+        [SerializeField]
+        private float knockBack;
+        [SerializeField]
+        private float knockBackLength;
+        [SerializeField]
+        private float knockBackCount;
 
         protected bool die;
         protected bool attacked;
+        protected float currentHealth;
+        protected bool knockFromRight;
 
-        [SerializeField]
-        protected float knockBack;
-        [SerializeField]
-        protected float knockBackLength;
-        [SerializeField]
-        protected float knockBackCount;
-
-        public bool knockFromRight;
+        private Character character;
         public bool Attacked { get { return attacked; } }
         public bool Die { get { return die; } }
-        protected Rigidbody2D body2D ;
+        
         protected virtual void Start()
         {
-            body2D = GetComponent<Rigidbody2D>();
             character = GetComponent<Character>();
             initialHealth = character.Health;
             currentHealth = initialHealth;
@@ -48,7 +46,7 @@ namespace Assets.Scripts.Characterrr.Helths
         }
         protected  void OnCharacterDeath()
         {
-            if (OnDeath != null)
+            if(!ReferenceEquals(OnDeath, null))
                 OnDeath();
         }
         protected virtual void OnTriggerEnter2D(Collider2D other)

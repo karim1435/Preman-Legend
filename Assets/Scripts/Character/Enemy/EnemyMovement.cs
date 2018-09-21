@@ -12,20 +12,25 @@ namespace Assets.Scripts.Characterrr.EnemyStates
         private Transform rightEdge;
         [SerializeField]
         private Transform leftEdge;
+
         private float moveSpeed;
+
         private Enemy enemy;
         private EnemyAttack enemyAttack;
-        public GameObject Target { get { return enemyAttack.Target; } }
+        private EnemyBehavior enemyBehavior;
 
+        public GameObject Target { get { return enemyAttack.Target; } }
         public Rigidbody2D Body2D { get; private set; }
         public bool onTheEdge { get { return ClampByEdge(); } }
-        private EnemyBehavior enemyBehavior;
+        
         void Start()
         {
             enemyBehavior = GetComponent<EnemyBehavior>();
             enemyAttack = GetComponent<EnemyAttack>();
+
             enemy = GetComponent<Enemy>();
             moveSpeed = enemy.MoveSpeed;
+
             Body2D = GetComponent<Rigidbody2D>();
 
             enemyBehavior.OnLookTarget += LookAtTarget;
@@ -40,13 +45,11 @@ namespace Assets.Scripts.Characterrr.EnemyStates
             enemyBehavior.OnEnemyMove -= Move;
             enemyBehavior.OnChangeDirection -= ToogleDirection;
         }
-     
         private void Move()
         {
             var tempSpeed = moveSpeed;
             var velX = tempSpeed * (float)enemy.Dir;
             Body2D.velocity = new Vector2(velX, Body2D.velocity.y);
-
         }
         private bool ClampByEdge()
         {
@@ -59,10 +62,10 @@ namespace Assets.Scripts.Characterrr.EnemyStates
             if (Target != null)
             {
                 float xDir = Target.transform.position.x - transform.position.x;
-                bool inLeft = xDir < 0 && enemy.Dir == Direction.Right;
-                bool inRight = xDir > 0 && enemy.Dir != Direction.Right;
+                bool inLeftEdge = xDir < 0 && enemy.Dir == Direction.Right;
+                bool inRightEdge = xDir > 0 && enemy.Dir != Direction.Right;
 
-                if (inLeft || inRight)
+                if (inLeftEdge || inRightEdge)
                     ToogleDirection();
             }
         }

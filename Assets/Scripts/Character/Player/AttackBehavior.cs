@@ -16,26 +16,23 @@ namespace Assets.Scripts.Characterrr.Attack
         private Transform knifePositon;
         [SerializeField]
         private List<string> damageSource;
-
         [SerializeField]
         protected Collider2D swordCollider;
 
-        protected WeaponManager weaponManager;
-        protected float attackPower;
-        protected float shootDamage;
+        
         protected float meleeAttack;
         protected float throwAttack;
-
         protected bool isAttack;
-        protected Character character;
+
+        protected WeaponManager weaponManager;
+        private Character character;
+
         public bool IsAttack { get { return isAttack; } set { isAttack = value; } }
         protected virtual void Start()
         {
             character = GetComponent<Character>();
             weaponManager = GetComponent<WeaponManager>();
 
-            attackPower = character.AttackPower;
-            shootDamage = character.ShootDamage;
             throwAttack = character.ThrowRange;
             meleeAttack = character.MeeleRange;
 

@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{6A63D9B2-9072-1A82-A433-34C61C538B4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -45,61 +46,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\IgnoreColiision.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\Character\Character.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\IEnemyState.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\IdleState.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\MeleeState.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\PetrolState.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\RangeState.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyBehavior.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyDeath.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyFighter.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyHealth.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyManager.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyRange.cs" />
-     <Compile Include="Assets\Scripts\Character\Enemy\EnemyShooter.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\AbstractBehavior.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\AttackBehavior.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\CollisionDetection.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\CollisionState.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\CollisionTrigger.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\Death.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\Direction.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\FaceDirection.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\Health.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\Player.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerAttack.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerDeath.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerJump.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerLongJump.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerManager.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerMelee.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Character\Player\PlayerShoot.cs" />
-     <Compile Include="Assets\Scripts\Input Game\ButtonState.cs" />
-     <Compile Include="Assets\Scripts\Input Game\Buttons.cs" />
-     <Compile Include="Assets\Scripts\Input Game\Condition.cs" />
-     <Compile Include="Assets\Scripts\Input Game\InputAxisState.cs" />
-     <Compile Include="Assets\Scripts\Input Game\InputManager.cs" />
-     <Compile Include="Assets\Scripts\Input Game\InputState.cs" />
-     <Compile Include="Assets\Scripts\Weapon\IShoot.cs" />
-     <Compile Include="Assets\Scripts\Weapon\IWeapon.cs" />
-     <Compile Include="Assets\Scripts\Weapon\Knife.cs" />
-     <Compile Include="Assets\Scripts\Weapon\KnifeWeapon.cs" />
-     <Compile Include="Assets\Scripts\Weapon\Sword.cs" />
-     <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Scripts\Character\IgnoreColiision.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\IEnemyState.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\IdleState.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\MeleeState.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\PetrolState.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\Enemy State\RangeState.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyDeath.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyFighter.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyRange.cs" />
+    <Compile Include="Assets\Scripts\Character\Enemy\EnemyShooter.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\AbstractBehavior.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\AttackBehavior.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\CollisionDetection.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\CollisionState.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\CollisionTrigger.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\Death.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\Direction.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\FaceDirection.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\Health.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerDeath.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerJump.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerLongJump.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerManager.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerMelee.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Character\Player\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\Input Game\ButtonState.cs" />
+    <Compile Include="Assets\Scripts\Input Game\Buttons.cs" />
+    <Compile Include="Assets\Scripts\Input Game\Condition.cs" />
+    <Compile Include="Assets\Scripts\Input Game\InputAxisState.cs" />
+    <Compile Include="Assets\Scripts\Input Game\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Input Game\InputState.cs" />
+    <Compile Include="Assets\Scripts\Weapon\IShoot.cs" />
+    <Compile Include="Assets\Scripts\Weapon\IWeapon.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Knife.cs" />
+    <Compile Include="Assets\Scripts\Weapon\KnifeWeapon.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Sword.cs" />
+    <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -109,5 +110,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

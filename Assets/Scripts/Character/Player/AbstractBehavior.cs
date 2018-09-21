@@ -13,6 +13,7 @@ namespace Assets.Scripts.Characterrr
         protected Buttons[] inputButtons;
         [SerializeField]
         protected MonoBehaviour[] disabledScripts;
+
         protected InputState inputState;
         protected Rigidbody2D body2D;
         protected CollisionState collisionState;

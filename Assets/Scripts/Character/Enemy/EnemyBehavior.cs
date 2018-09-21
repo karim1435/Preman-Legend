@@ -10,16 +10,15 @@ namespace Assets.Scripts.Characterrr.EnemyStates
     public abstract class EnemyBehavior : MonoBehaviour
     {
         public delegate void EnemyBehave();
+
         public event EnemyBehave OnLookTarget;
         public event EnemyBehave OnEnemyMove;
         public event EnemyBehave OnChangeDirection;
 
         private IEnemyState currentState;
-
-        protected EnemyAttack enemyAttack;
-        protected EnemyMovement enemyMovement;
-        protected EnemyHealth enemyStatusHealth;
-        protected Enemy enemy;
+        private EnemyAttack enemyAttack;
+        private EnemyMovement enemyMovement;
+        private EnemyHealth enemyStatusHealth;
 
         public bool Idle { get; set; }
         public bool Petrolling { get; set; }
@@ -33,7 +32,6 @@ namespace Assets.Scripts.Characterrr.EnemyStates
         {
             enemyMovement = GetComponent<EnemyMovement>();
             enemyAttack = GetComponent<EnemyAttack>();
-            enemy = GetComponent<Enemy>();
             enemyStatusHealth = GetComponent<EnemyHealth>();
             Body2D = GetComponent<Rigidbody2D>();
             ChangeState(new IdleState());
@@ -45,7 +43,7 @@ namespace Assets.Scripts.Characterrr.EnemyStates
             if (Idle || Fighting || enemyStatusHealth.Die)
                 Body2D.velocity = Vector2.zero;
 
-            if (OnLookTarget != null)
+            if (!ReferenceEquals(OnLookTarget, null))
                 OnLookTarget();
         }
 
@@ -73,7 +71,7 @@ namespace Assets.Scripts.Characterrr.EnemyStates
         }
         protected void TurnEdgeBack()
         {
-            if (OnChangeDirection != null)
+            if (!ReferenceEquals(OnChangeDirection, null))
                 OnChangeDirection();
             ChangeState(new PetrolState());
 
@@ -82,7 +80,7 @@ namespace Assets.Scripts.Characterrr.EnemyStates
         {
             if (!Fighting && !Idle || !Shoot)
             {
-                if (OnEnemyMove != null)
+                if(!ReferenceEquals(OnEnemyMove,null))
                     OnEnemyMove();
             }
         }

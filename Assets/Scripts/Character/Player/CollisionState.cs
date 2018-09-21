@@ -14,8 +14,8 @@ namespace Assets.Scripts.Characterrr
         [SerializeField]
         private Vector2 bottomPosition=Vector2.zero;
         [SerializeField]
-        private float collisionRadius = 10f;
 
+        private float collisionRadius = 10f;
         public bool Standing { get { return standing; } }
         void FixedUpdate()
         {

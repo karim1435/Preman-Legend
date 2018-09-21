@@ -9,7 +9,6 @@ namespace Assets.Scripts.Characterrr.EnemyStates
 {
     public class EnemyAttack:AttackBehavior
     {
-        private Enemy enemy;
         private GameObject target;
         private EnemyRange enemyRange;
         public GameObject Target { get { return target; }set { target = value; } }
@@ -52,7 +51,6 @@ namespace Assets.Scripts.Characterrr.EnemyStates
         {
             AttackEnemy();
         }
-        
         private void TargetAttack(GameObject other)
         {
             target = other;
